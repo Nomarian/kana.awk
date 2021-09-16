@@ -3,10 +3,10 @@
 #
 
 BEGIN {
+  FS = ":"
+
   # slurp the csv kana into associative arrays
   while (getline < ARGV[1] > 0) {
-    FS = ":"
- 
     hiragana[$1] = $2
     katakana[$1] = $3
   }
@@ -22,17 +22,16 @@ BEGIN {
 
     # print the hiragana
     for (i = 0; i <= romaji_length; i++) {
-      printf hiragana[romaji[i]]
+      printf("%s", hiragana[romaji[i]])
     }
 
     printf "\n"
 
     # print the katakana
     for (i = 0; i <= romaji_length; i++) {
-      printf katakana[romaji[i]]
+      printf("%s", katakana[romaji[i]])
     }
 
     printf "\n"
-
   }
 }
