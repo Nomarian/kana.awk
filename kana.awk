@@ -13,7 +13,7 @@ BEGIN {
 
   while (getline < "-" > 0) {
     # split the string into fields
-    gsub("([kstnhmr][aiueo])|(chi)|(tsu)|(shi)|(y[auo])|(w[ao]|n)|([aiueo])|(\.)", "&:", $0)
+    gsub("([kstnhmr][aiueo])|(chi)|(tsu)|(shi)|(y[auo])|(w[ao])|(n)|([aiueo])|(\.)", "&:", $0)
 
     romaji_length = split($0, romaji, ":")
 
