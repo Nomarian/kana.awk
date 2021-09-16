@@ -1,5 +1,3 @@
-#!/usr/bin/awk -f
-
 #
 # convert romaji into hiragana and katakana.
 #
